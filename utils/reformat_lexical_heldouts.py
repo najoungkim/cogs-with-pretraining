@@ -79,7 +79,7 @@ def main():
     print(f'Reformatted and saved COGS data for T5 to {args.output_path}.')
 
     with open(os.path.join(args.output_path, 'added_vocab.txt'), 'w') as wf:
-        for vocab in _HELD_OUT_VOCAB_MAP.values():
+        for vocab in vocab_map.values():
             wf.write(f'{vocab}\n')
 
 
