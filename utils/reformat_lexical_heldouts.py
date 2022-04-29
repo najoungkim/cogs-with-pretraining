@@ -31,6 +31,7 @@ _HELD_OUT_VOCAB_MAP = {
     'ship': '[w_20]'
 }
 _RANDOM_STR_LENS = range(15, 30)
+_RANDOM_STR_LENS_SHORTER = range(7, 15)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -40,7 +41,7 @@ def main():
     parser.add_argument('--output_path', default=None, type=str, required=True,
                         help='Path to save the output data to.')
     parser.add_argument('--new_heldout_type', default='[w_n]', type=str,
-                        choices=['[w_n]', 'random_str', 'random_phonological_str'],
+                        choices=['[w_n]', 'random_str', 'random_str_shorter', 'random_phonological_str'],
                         help='Type of replacement for the held-out lexical items.')
     args = parser.parse_args()
 
@@ -50,10 +51,13 @@ def main():
     vocab_map = None
     if args.new_heldout_type == '[w_n]':
         vocab_map = _HELD_OUT_VOCAB_MAP
-    elif args.new_heldout_type == 'random_str':
+    elif args.new_heldout_type.startswith('random_str'):
         vocab_map = {}
         for key in _HELD_OUT_VOCAB_MAP.keys():
-            word_len = random.choice(_RANDOM_STR_LENS)
+            if args.new_heldout_type == 'random_str':
+                word_len = random.choice(_RANDOM_STR_LENS) 
+            else:
+                word_len = random.choice(_RANDOM_STR_LENS_SHORTER)
             new_word = ''
             for _ in range(word_len):
                 new_word += random.choice(string.ascii_letters).lower()
