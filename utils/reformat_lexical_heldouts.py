@@ -32,7 +32,7 @@ _HELD_OUT_VOCAB_MAP = {
 }
 _RANDOM_STR_LENS = range(15, 30)
 _RANDOM_STR_LENS_SHORTER = range(7, 15)
-_CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+_CONSONANTS = 'bcdfghklmnprstvwz'
 _VOWELS = 'aeiou'
 
 def main():
