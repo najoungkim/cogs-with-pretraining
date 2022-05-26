@@ -32,7 +32,8 @@ _HELD_OUT_VOCAB_MAP = {
 }
 _RANDOM_STR_LENS = range(15, 30)
 _RANDOM_STR_LENS_SHORTER = range(7, 15)
-_CONSONANTS = 'bcdfghklmnprstvwz'
+_CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+_CONSONANTS_SET2 = 'bcdfghklmnprstvwz'
 _VOWELS = 'aeiou'
 
 def main():
@@ -44,8 +45,12 @@ def main():
                         help='Path to save the output data to.')
     parser.add_argument('--new_heldout_type', default='[w_n]', type=str,
                         choices=['[w_n]', 'random_str', 'random_str_shorter',
-                                 'random_phonological_str', 'random_phonological_str_shorter'],
+                                 'random_phonological_str', 'random_phonological_str_shorter',
+                                 'random_phonological_str_cons_reduced', 'random_phonological_str_cons_reduced_shorter'],
                         help='Type of replacement for the held-out lexical items.')
+    parser.add_argument('--initial_extra_space', default='no_space', type=str,
+                        choices=['no_space', 'only_initial_novel_word', 'all_initial_words'],
+                        help='Random seed for random character sampling.')
     parser.add_argument('--seed', default=555, type=int,
                         help='Random seed for random character sampling.')
     args = parser.parse_args()
@@ -72,14 +77,18 @@ def main():
     elif args.new_heldout_type.startswith('random_phonological_str'):
         vocab_map = {}
         for key in _HELD_OUT_VOCAB_MAP.keys():
-            if args.new_heldout_type == 'random_phonological_str':
-                word_len = random.choice(_RANDOM_STR_LENS)
-            else:
+            if args.new_heldout_type.endswith('shorter'):
                 word_len = random.choice(_RANDOM_STR_LENS_SHORTER)
+            else:
+                word_len = random.choice(_RANDOM_STR_LENS)
+            if 'cons_reduced' in args.new_heldout_type:
+                consonant_set = _CONSONANTS_SET2
+            else:
+                consonant_set = _CONSONANTS
             new_word = ''
             for i in range(word_len):
                 if i % 2 == 0:
-                    new_word += random.choice(_CONSONANTS)
+                    new_word += random.choice(consonant_set)
                 else:
                     new_word += random.choice(_VOWELS)
             vocab_map[key] = new_word
@@ -94,6 +103,15 @@ def main():
                 source, target, gen_type = line.rstrip('\n').split('\t')
                 source = ' '.join([vocab_map.get(w, w) for w in source.split()])
                 target = ' '.join([vocab_map.get(w, w) for w in target.split()])
+                if args.new_heldout_type == '[w_n]':
+                    if args.initial_extra_space == 'all_initial_words':
+                        source = ' ' + source
+                        target = ' ' + target
+                    elif args.initial_extra_space == 'only_initial_novel_word':
+                        if source.startswith('[w_'):
+                            source = ' ' + source
+                        if target.startswith('[w_'):
+                            target = ' ' + target
 
                 lines_to_write.append(f'{source}\t{target}\t{gen_type}\n')
 
