@@ -45,8 +45,8 @@ def main():
                         help='Path to save the output data to.')
     parser.add_argument('--new_heldout_type', default='[w_n]', type=str,
                         choices=['[w_n]', 'random_str', 'random_str_shorter',
-                                 'random_phonological_str', 'random_phonological_str_shorter',
-                                 'random_phonological_str_cons_reduced', 'random_phonological_str_cons_reduced_shorter'],
+                                 'random_cvcv_str', 'random_cvcv_str_shorter',
+                                 'random_cvcv_str_cons_reduced', 'random_cvcv_str_cons_reduced_shorter'],
                         help='Type of replacement for the held-out lexical items.')
     parser.add_argument('--initial_extra_space', default='no_space', type=str,
                         choices=['no_space', 'only_initial_novel_word', 'all_initial_words'],
@@ -74,7 +74,7 @@ def main():
             for _ in range(word_len):
                 new_word += random.choice(string.ascii_letters).lower()
             vocab_map[key] = new_word
-    elif args.new_heldout_type.startswith('random_phonological_str'):
+    elif args.new_heldout_type.startswith('random_cvcv_str'):
         vocab_map = {}
         for key in _HELD_OUT_VOCAB_MAP.keys():
             if args.new_heldout_type.endswith('shorter'):
