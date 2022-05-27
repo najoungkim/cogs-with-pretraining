@@ -50,7 +50,9 @@ def main():
                         help='Type of replacement for the held-out lexical items.')
     parser.add_argument('--initial_extra_space', default='no_space', type=str,
                         choices=['no_space', 'only_initial_novel_word', 'all_initial_words'],
-                        help='Random seed for random character sampling.')
+                        help='Whether to add sentence-initial spacing (for tokenizer consistency).')
+    parser.add_argument('--oversample_exposure_examples', action='store_true',
+                        help='If true, oversample exposure examples in the training set.')
     parser.add_argument('--seed', default=555, type=int,
                         help='Random seed for random character sampling.')
     args = parser.parse_args()
@@ -98,9 +100,13 @@ def main():
     print(vocab_map)
     for filename in _DATASET_FILENAMES:
         lines_to_write = []
+        exposure_examples = []
         with open(os.path.join(args.input_path, f'{filename}.tsv')) as f:
             for line in f:
+                write_exposure_example = False
                 source, target, gen_type = line.rstrip('\n').split('\t')
+                if any([vocab_map.get(w, False) for w in source.split()]):
+                    write_exposure_example = True
                 source = ' '.join([vocab_map.get(w, w) for w in source.split()])
                 target = ' '.join([vocab_map.get(w, w) for w in target.split()])
                 if args.new_heldout_type == '[w_n]':
@@ -114,9 +120,18 @@ def main():
                             target = ' ' + target
 
                 lines_to_write.append(f'{source}\t{target}\t{gen_type}\n')
+                if 'train' in filename and write_exposure_example:
+                    exposure_examples.append(f'{source}\t{target}\t{gen_type}\n')
+                    if args.oversample_exposure_examples:
+                        for _ in range(0, 100):
+                            lines_to_write.append(f'{source}\t{target}\t{gen_type}\n')
 
         with open(os.path.join(args.output_path, f'{filename}.tsv'), 'w') as wf:
             wf.writelines(lines_to_write)
+
+        if 'train' in filename:
+            with open(os.path.join(args.output_path, f'{filename}_exposure_examples.tsv'), 'w') as wf:
+                wf.writelines(exposure_examples)
 
 
     print(f'Reformatted and saved COGS data for T5 to {args.output_path}.')
