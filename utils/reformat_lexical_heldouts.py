@@ -32,6 +32,7 @@ _HELD_OUT_VOCAB_MAP = {
 }
 _RANDOM_STR_LENS = range(15, 30)
 _RANDOM_STR_LENS_SHORTER = range(7, 15)
+_LONG_WID_LENS = range(150, 160)
 _CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
 _CONSONANTS_SET2 = 'bcdfghklmnprstvwz'
 _VOWELS = 'aeiou'
@@ -44,7 +45,7 @@ def main():
     parser.add_argument('--output_path', default=None, type=str, required=True,
                         help='Path to save the output data to.')
     parser.add_argument('--new_heldout_type', default='[w_n]', type=str,
-                        choices=['[w_n]', 'random_str', 'random_str_shorter',
+                        choices=['[w_n]', '[w_n]_randn', 'random_str', 'random_str_shorter',
                                  'random_cvcv_str', 'random_cvcv_str_shorter',
                                  'random_cvcv_str_cons_reduced', 'random_cvcv_str_cons_reduced_shorter'],
                         help='Type of replacement for the held-out lexical items.')
@@ -65,6 +66,17 @@ def main():
 
     if args.new_heldout_type == '[w_n]':
         vocab_map = _HELD_OUT_VOCAB_MAP
+    elif args.new_heldout_type == '[w_n]_randn':
+        vocab_map = dict.fromkeys(_HELD_OUT_VOCAB_MAP.keys())
+        w_vals = {}
+        for key in vocab_map.keys():
+            word_idx = ''
+            word_idx_len = random.choice(_LONG_WID_LENS)
+            while word_idx in vocab_map.values() or word_idx == '':
+                for _ in range(word_idx_len):
+                    word_idx += str(random.randint(0, 9))
+                vocab_map[key] = f'[w_{word_idx}]'
+        assert len(vocab_map.values()) == len(set(vocab_map.values())), (len(vocab_map.values()), len(set(vocab_map.values())))
     elif args.new_heldout_type.startswith('random_str'):
         vocab_map = {}
         for key in _HELD_OUT_VOCAB_MAP.keys():
@@ -109,7 +121,7 @@ def main():
                     write_exposure_example = True
                 source = ' '.join([vocab_map.get(w, w) for w in source.split()])
                 target = ' '.join([vocab_map.get(w, w) for w in target.split()])
-                if args.new_heldout_type == '[w_n]':
+                if args.new_heldout_type in ['[w_n]', '[w_n]_randn']:
                     if args.initial_extra_space == 'all_initial_words':
                         source = ' ' + source
                         target = ' ' + target
@@ -123,7 +135,7 @@ def main():
                 if 'train' in filename and write_exposure_example:
                     exposure_examples.append(f'{source}\t{target}\t{gen_type}\n')
                     if args.oversample_exposure_examples:
-                        for _ in range(0, 100):
+                        for _ in range(0, 200):
                             lines_to_write.append(f'{source}\t{target}\t{gen_type}\n')
 
         with open(os.path.join(args.output_path, f'{filename}.tsv'), 'w') as wf:
