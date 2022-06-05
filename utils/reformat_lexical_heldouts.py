@@ -45,7 +45,7 @@ def main():
     parser.add_argument('--output_path', default=None, type=str, required=True,
                         help='Path to save the output data to.')
     parser.add_argument('--new_heldout_type', default='[w_n]', type=str,
-                        choices=['[w_n]', '[w_n]_randn', 'random_str', 'random_str_shorter',
+                        choices=['no_mod', '[w_n]', '[w_n]_randn', 'random_str', 'random_str_shorter',
                                  'random_cvcv_str', 'random_cvcv_str_shorter',
                                  'random_cvcv_str_cons_reduced', 'random_cvcv_str_cons_reduced_shorter'],
                         help='Type of replacement for the held-out lexical items.')
@@ -64,7 +64,9 @@ def main():
     random.seed(args.seed)
     vocab_map = None
 
-    if args.new_heldout_type == '[w_n]':
+    if args.new_heldout_type == 'no_mod':
+        vocab_map = {key: key for key in _HELD_OUT_VOCAB_MAP}
+    elif args.new_heldout_type == '[w_n]':
         vocab_map = _HELD_OUT_VOCAB_MAP
     elif args.new_heldout_type == '[w_n]_randn':
         vocab_map = dict.fromkeys(_HELD_OUT_VOCAB_MAP.keys())

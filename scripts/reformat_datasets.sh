@@ -1,3 +1,4 @@
+python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/no_mod --new_heldout_type 'no_mod'
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/w_n --new_heldout_type '[w_n]'
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/w_n_randn --new_heldout_type '[w_n]_randn' --seed 1000
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/w_n_space_prepended --initial_extra_space 'only_initial_novel_word'
@@ -12,6 +13,7 @@ python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --out
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_cons_reduced --new_heldout_type random_cvcv_str_cons_reduced --seed 999
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_cons_reduced_shorter --new_heldout_type random_cvcv_str_cons_reduced_shorter --seed 9999
 
+python ../utils/convert_cogs_to_json.py --input_path ../data/no_mod/ --output_path ../data/no_mod
 python ../utils/convert_cogs_to_json.py --input_path ../data/w_n/ --output_path ../data/w_n
 python ../utils/convert_cogs_to_json.py --input_path ../data/w_n_randn/ --output_path ../data/w_n_randn
 python ../utils/convert_cogs_to_json.py --input_path ../data/w_n_space_prepended/ --output_path ../data/w_n_space_prepended
