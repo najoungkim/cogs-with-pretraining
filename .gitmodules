@@ -1,0 +1,6 @@
+[submodule "src/parsing-transformers"]
+	path = src/parsing-transformers
+	url = https://github.com/najoungkim/parsing-transformers
+[submodule "parsing-transformers"]
+	path = parsing-transformers
+	url = https://github.com/najoungkim/parsing-transformers
