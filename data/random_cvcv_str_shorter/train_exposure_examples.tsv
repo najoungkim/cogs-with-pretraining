@@ -1,0 +1,15 @@
+A landlord hoped that the jisoleyafatu decomposed .	* jisoleyafatu ( x _ 5 ) ; landlord ( x _ 1 ) AND hope . agent ( x _ 2 , x _ 1 ) AND hope . ccomp ( x _ 2 , x _ 6 ) AND decompose . theme ( x _ 6 , x _ 5 )	exposure_example_unacc_subj
+Julian dafagucacay .	hitikuzodecere . theme ( x _ 1 , Julian )	exposure_example_unacc
+A rusoqiwo ate the cake on the bed .	* cake ( x _ 4 ) ; * bed ( x _ 7 ) ; rusoqiwo ( x _ 1 ) AND eat . agent ( x _ 2 , x _ 1 ) AND eat . theme ( x _ 2 , x _ 4 ) AND cake . nmod . on ( x _ 4 , x _ 7 )	exposure_example_subj_common
+The creature grew jumiganawo .	* creature ( x _ 1 ) ; grow . agent ( x _ 2 , x _ 1 ) AND grow . theme ( x _ 2 , jumiganawo )	exposure_example_obj_proper
+nunilugakiqot	nunilugakiqot	primitive
+The girl wamilocazec a cookie in a container to Scarlett .	* girl ( x _ 1 ) ; nohagojanu . agent ( x _ 2 , x _ 1 ) AND nohagojanu . theme ( x _ 2 , x _ 4 ) AND nohagojanu . recipient ( x _ 2 , Scarlett ) AND cookie ( x _ 4 ) AND cookie . nmod . in ( x _ 4 , x _ 7 ) AND container ( x _ 7 )	exposure_example_pp_dative
+yecujutado gave the cake beside a stage to Olivia .	* cake ( x _ 3 ) ; give . agent ( x _ 1 , yecujutado ) AND give . theme ( x _ 1 , x _ 3 ) AND give . recipient ( x _ 1 , Olivia ) AND cake . nmod . beside ( x _ 3 , x _ 6 ) AND stage ( x _ 6 )	exposure_example_subj_proper
+Henry liked a qenikayimese in a box .	like . agent ( x _ 1 , Henry ) AND like . theme ( x _ 1 , x _ 3 ) AND qenikayimese ( x _ 3 ) AND qenikayimese . nmod . in ( x _ 3 , x _ 6 ) AND box ( x _ 6 )	exposure_example_obj_common
+A hucovicajop helped a cake in the house .	* house ( x _ 7 ) ; hucovicajop ( x _ 1 ) AND help . agent ( x _ 2 , x _ 1 ) AND help . theme ( x _ 2 , x _ 4 ) AND cake ( x _ 4 ) AND cake . nmod . in ( x _ 4 , x _ 7 )	exposure_example_transitive_subj
+The goose cawesudafa .	* goose ( x _ 1 ) ; geqiginecif . agent ( x _ 2 , x _ 1 )	exposure_example_obj_omitted_transitive
+jibiyuyimika	LAMBDA a . LAMBDA e . jibiyuyimika . agent ( e , a )	primitive
+A crocodile hilepacewok William .	crocodile ( x _ 1 ) AND bifunajihepe . agent ( x _ 2 , x _ 1 ) AND bifunajihepe . theme ( x _ 2 , William )	exposure_example_active
+The girl cifoqof Liam the cookie .	* girl ( x _ 1 ) ; * cookie ( x _ 5 ) ; lakemaj . agent ( x _ 2 , x _ 1 ) AND lakemaj . recipient ( x _ 2 , Liam ) AND lakemaj . theme ( x _ 2 , x _ 5 )	exposure_example_do_dative
+qozolowax	LAMBDA a . qozolowax ( a )	primitive
+The book was bahufowu .	* book ( x _ 1 ) ; wutozodibub . theme ( x _ 3 , x _ 1 )	exposure_example_passive

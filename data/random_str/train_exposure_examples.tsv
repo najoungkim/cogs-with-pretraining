@@ -1,0 +1,15 @@
+A landlord hoped that the rmptwfybkolfgpytmytsrkaqkxvql decomposed .	* rmptwfybkolfgpytmytsrkaqkxvql ( x _ 5 ) ; landlord ( x _ 1 ) AND hope . agent ( x _ 2 , x _ 1 ) AND hope . ccomp ( x _ 2 , x _ 6 ) AND decompose . theme ( x _ 6 , x _ 5 )	exposure_example_unacc_subj
+Julian frczjmrzxukbcfjhdscsbb .	nrkaimtslyuywwjqnlkazsw . theme ( x _ 1 , Julian )	exposure_example_unacc
+A rkijtgjqamjtwsmcbi ate the cake on the bed .	* cake ( x _ 4 ) ; * bed ( x _ 7 ) ; rkijtgjqamjtwsmcbi ( x _ 1 ) AND eat . agent ( x _ 2 , x _ 1 ) AND eat . theme ( x _ 2 , x _ 4 ) AND cake . nmod . on ( x _ 4 , x _ 7 )	exposure_example_subj_common
+The creature grew lvuntmgqympvfkmfiqtkfuaahuqi .	* creature ( x _ 1 ) ; grow . agent ( x _ 2 , x _ 1 ) AND grow . theme ( x _ 2 , lvuntmgqympvfkmfiqtkfuaahuqi )	exposure_example_obj_proper
+amufsfdppilmrrwswrdyb	amufsfdppilmrrwswrdyb	primitive
+The girl glpsjpimzeljulgqfnyxkquu a cookie in a container to Scarlett .	* girl ( x _ 1 ) ; ocrxeagvbqmqhoho . agent ( x _ 2 , x _ 1 ) AND ocrxeagvbqmqhoho . theme ( x _ 2 , x _ 4 ) AND ocrxeagvbqmqhoho . recipient ( x _ 2 , Scarlett ) AND cookie ( x _ 4 ) AND cookie . nmod . in ( x _ 4 , x _ 7 ) AND container ( x _ 7 )	exposure_example_pp_dative
+raohrreinnequrmxhrb gave the cake beside a stage to Olivia .	* cake ( x _ 3 ) ; give . agent ( x _ 1 , raohrreinnequrmxhrb ) AND give . theme ( x _ 1 , x _ 3 ) AND give . recipient ( x _ 1 , Olivia ) AND cake . nmod . beside ( x _ 3 , x _ 6 ) AND stage ( x _ 6 )	exposure_example_subj_proper
+Henry liked a pdjporsukujytztwepelmsrrxt in a box .	like . agent ( x _ 1 , Henry ) AND like . theme ( x _ 1 , x _ 3 ) AND pdjporsukujytztwepelmsrrxt ( x _ 3 ) AND pdjporsukujytztwepelmsrrxt . nmod . in ( x _ 3 , x _ 6 ) AND box ( x _ 6 )	exposure_example_obj_common
+A deyitigmwxylfrntame helped a cake in the house .	* house ( x _ 7 ) ; deyitigmwxylfrntame ( x _ 1 ) AND help . agent ( x _ 2 , x _ 1 ) AND help . theme ( x _ 2 , x _ 4 ) AND cake ( x _ 4 ) AND cake . nmod . in ( x _ 4 , x _ 7 )	exposure_example_transitive_subj
+The goose xmkuczajfqqqryleiaiafrvmtexem .	* goose ( x _ 1 ) ; ffdqrmojcbtjnuxtemzwtzd . agent ( x _ 2 , x _ 1 )	exposure_example_obj_omitted_transitive
+bawtukbhlbsfovjjpvcgpqvbt	LAMBDA a . LAMBDA e . bawtukbhlbsfovjjpvcgpqvbt . agent ( e , a )	primitive
+A crocodile oymissttilzmbmwusijerzrlugow William .	crocodile ( x _ 1 ) AND avqcnlqcieuzfraxxvmltnmvjjswr . agent ( x _ 2 , x _ 1 ) AND avqcnlqcieuzfraxxvmltnmvjjswr . theme ( x _ 2 , William )	exposure_example_active
+The girl fmvycpxmrfvldgb Liam the cookie .	* girl ( x _ 1 ) ; * cookie ( x _ 5 ) ; cfijscqvnuefunzzncymufxqn . agent ( x _ 2 , x _ 1 ) AND cfijscqvnuefunzzncymufxqn . recipient ( x _ 2 , Liam ) AND cfijscqvnuefunzzncymufxqn . theme ( x _ 2 , x _ 5 )	exposure_example_do_dative
+cfccgrhfummzuamqujztohwi	LAMBDA a . cfccgrhfummzuamqujztohwi ( a )	primitive
+The book was ouerlymzwaelydwubtwjocd .	* book ( x _ 1 ) ; znzfjdbmkofbbbdgvg . theme ( x _ 3 , x _ 1 )	exposure_example_passive

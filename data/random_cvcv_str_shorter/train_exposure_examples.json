@@ -1,0 +1,15 @@
+{"translation": {"en": "A landlord hoped that the jisoleyafatu decomposed .", "mentalese": "* jisoleyafatu ( x _ 5 ) ; landlord ( x _ 1 ) AND hope . agent ( x _ 2 , x _ 1 ) AND hope . ccomp ( x _ 2 , x _ 6 ) AND decompose . theme ( x _ 6 , x _ 5 )"}}
+{"translation": {"en": "Julian dafagucacay .", "mentalese": "hitikuzodecere . theme ( x _ 1 , Julian )"}}
+{"translation": {"en": "A rusoqiwo ate the cake on the bed .", "mentalese": "* cake ( x _ 4 ) ; * bed ( x _ 7 ) ; rusoqiwo ( x _ 1 ) AND eat . agent ( x _ 2 , x _ 1 ) AND eat . theme ( x _ 2 , x _ 4 ) AND cake . nmod . on ( x _ 4 , x _ 7 )"}}
+{"translation": {"en": "The creature grew jumiganawo .", "mentalese": "* creature ( x _ 1 ) ; grow . agent ( x _ 2 , x _ 1 ) AND grow . theme ( x _ 2 , jumiganawo )"}}
+{"translation": {"en": "nunilugakiqot", "mentalese": "nunilugakiqot"}}
+{"translation": {"en": "The girl wamilocazec a cookie in a container to Scarlett .", "mentalese": "* girl ( x _ 1 ) ; nohagojanu . agent ( x _ 2 , x _ 1 ) AND nohagojanu . theme ( x _ 2 , x _ 4 ) AND nohagojanu . recipient ( x _ 2 , Scarlett ) AND cookie ( x _ 4 ) AND cookie . nmod . in ( x _ 4 , x _ 7 ) AND container ( x _ 7 )"}}
+{"translation": {"en": "yecujutado gave the cake beside a stage to Olivia .", "mentalese": "* cake ( x _ 3 ) ; give . agent ( x _ 1 , yecujutado ) AND give . theme ( x _ 1 , x _ 3 ) AND give . recipient ( x _ 1 , Olivia ) AND cake . nmod . beside ( x _ 3 , x _ 6 ) AND stage ( x _ 6 )"}}
+{"translation": {"en": "Henry liked a qenikayimese in a box .", "mentalese": "like . agent ( x _ 1 , Henry ) AND like . theme ( x _ 1 , x _ 3 ) AND qenikayimese ( x _ 3 ) AND qenikayimese . nmod . in ( x _ 3 , x _ 6 ) AND box ( x _ 6 )"}}
+{"translation": {"en": "A hucovicajop helped a cake in the house .", "mentalese": "* house ( x _ 7 ) ; hucovicajop ( x _ 1 ) AND help . agent ( x _ 2 , x _ 1 ) AND help . theme ( x _ 2 , x _ 4 ) AND cake ( x _ 4 ) AND cake . nmod . in ( x _ 4 , x _ 7 )"}}
+{"translation": {"en": "The goose cawesudafa .", "mentalese": "* goose ( x _ 1 ) ; geqiginecif . agent ( x _ 2 , x _ 1 )"}}
+{"translation": {"en": "jibiyuyimika", "mentalese": "LAMBDA a . LAMBDA e . jibiyuyimika . agent ( e , a )"}}
+{"translation": {"en": "A crocodile hilepacewok William .", "mentalese": "crocodile ( x _ 1 ) AND bifunajihepe . agent ( x _ 2 , x _ 1 ) AND bifunajihepe . theme ( x _ 2 , William )"}}
+{"translation": {"en": "The girl cifoqof Liam the cookie .", "mentalese": "* girl ( x _ 1 ) ; * cookie ( x _ 5 ) ; lakemaj . agent ( x _ 2 , x _ 1 ) AND lakemaj . recipient ( x _ 2 , Liam ) AND lakemaj . theme ( x _ 2 , x _ 5 )"}}
+{"translation": {"en": "qozolowax", "mentalese": "LAMBDA a . qozolowax ( a )"}}
+{"translation": {"en": "The book was bahufowu .", "mentalese": "* book ( x _ 1 ) ; wutozodibub . theme ( x _ 3 , x _ 1 )"}}

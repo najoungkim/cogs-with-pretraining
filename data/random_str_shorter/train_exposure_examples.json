@@ -1,0 +1,15 @@
+{"translation": {"en": "A landlord hoped that the vynglyyd decomposed .", "mentalese": "* vynglyyd ( x _ 5 ) ; landlord ( x _ 1 ) AND hope . agent ( x _ 2 , x _ 1 ) AND hope . ccomp ( x _ 2 , x _ 6 ) AND decompose . theme ( x _ 6 , x _ 5 )"}}
+{"translation": {"en": "Julian llrdsynve .", "mentalese": "ngktsynxan . theme ( x _ 1 , Julian )"}}
+{"translation": {"en": "A ybsgazjjxtvhdj ate the cake on the bed .", "mentalese": "* cake ( x _ 4 ) ; * bed ( x _ 7 ) ; ybsgazjjxtvhdj ( x _ 1 ) AND eat . agent ( x _ 2 , x _ 1 ) AND eat . theme ( x _ 2 , x _ 4 ) AND cake . nmod . on ( x _ 4 , x _ 7 )"}}
+{"translation": {"en": "The creature grew ewhtayiqayw .", "mentalese": "* creature ( x _ 1 ) ; grow . agent ( x _ 2 , x _ 1 ) AND grow . theme ( x _ 2 , ewhtayiqayw )"}}
+{"translation": {"en": "qdfnccbbx", "mentalese": "qdfnccbbx"}}
+{"translation": {"en": "The girl wxuhmftxfmev a cookie in a container to Scarlett .", "mentalese": "* girl ( x _ 1 ) ; qgbblevfkqwxxw . agent ( x _ 2 , x _ 1 ) AND qgbblevfkqwxxw . theme ( x _ 2 , x _ 4 ) AND qgbblevfkqwxxw . recipient ( x _ 2 , Scarlett ) AND cookie ( x _ 4 ) AND cookie . nmod . in ( x _ 4 , x _ 7 ) AND container ( x _ 7 )"}}
+{"translation": {"en": "dvalcxw gave the cake beside a stage to Olivia .", "mentalese": "* cake ( x _ 3 ) ; give . agent ( x _ 1 , dvalcxw ) AND give . theme ( x _ 1 , x _ 3 ) AND give . recipient ( x _ 1 , Olivia ) AND cake . nmod . beside ( x _ 3 , x _ 6 ) AND stage ( x _ 6 )"}}
+{"translation": {"en": "Henry liked a xsshyftnnciob in a box .", "mentalese": "like . agent ( x _ 1 , Henry ) AND like . theme ( x _ 1 , x _ 3 ) AND xsshyftnnciob ( x _ 3 ) AND xsshyftnnciob . nmod . in ( x _ 3 , x _ 6 ) AND box ( x _ 6 )"}}
+{"translation": {"en": "A xblrqcrdnbf helped a cake in the house .", "mentalese": "* house ( x _ 7 ) ; xblrqcrdnbf ( x _ 1 ) AND help . agent ( x _ 2 , x _ 1 ) AND help . theme ( x _ 2 , x _ 4 ) AND cake ( x _ 4 ) AND cake . nmod . in ( x _ 4 , x _ 7 )"}}
+{"translation": {"en": "The goose fbstixkaye .", "mentalese": "* goose ( x _ 1 ) ; ugdcqaukuniwhh . agent ( x _ 2 , x _ 1 )"}}
+{"translation": {"en": "oegbaxwthrqccq", "mentalese": "LAMBDA a . LAMBDA e . oegbaxwthrqccq . agent ( e , a )"}}
+{"translation": {"en": "A crocodile yuwtvqsqtnas William .", "mentalese": "crocodile ( x _ 1 ) AND aehljizsegise . agent ( x _ 2 , x _ 1 ) AND aehljizsegise . theme ( x _ 2 , William )"}}
+{"translation": {"en": "The girl mbadxfjshhercn Liam the cookie .", "mentalese": "* girl ( x _ 1 ) ; * cookie ( x _ 5 ) ; awouimhwu . agent ( x _ 2 , x _ 1 ) AND awouimhwu . recipient ( x _ 2 , Liam ) AND awouimhwu . theme ( x _ 2 , x _ 5 )"}}
+{"translation": {"en": "odlpbhrgtrjkr", "mentalese": "LAMBDA a . odlpbhrgtrjkr ( a )"}}
+{"translation": {"en": "The book was reofoub .", "mentalese": "* book ( x _ 1 ) ; bnqwpqvbgxj . theme ( x _ 3 , x _ 1 )"}}
