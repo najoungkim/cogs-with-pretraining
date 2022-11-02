@@ -3,7 +3,7 @@ import argparse
 import json
 import os
 
-_SPLITS = ['test', 'dev', 'train', 'gen', 'train_100', 'train_exposure_examples']
+_SPLITS = ['test', 'dev', 'train', 'gen', 'train_100', 'train_exposure_examples', 'test_heldout_items']
 
 
 def main():

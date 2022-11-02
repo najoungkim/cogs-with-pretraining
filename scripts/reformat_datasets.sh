@@ -12,6 +12,7 @@ python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --out
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_shorter --new_heldout_type random_cvcv_str_shorter --seed 888
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_cons_reduced --new_heldout_type random_cvcv_str_cons_reduced --seed 999
 python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_cons_reduced_shorter --new_heldout_type random_cvcv_str_cons_reduced_shorter --seed 9999
+python ../utils/reformat_lexical_heldouts.py --input_path ../../COGS/data/ --output_path ../data/random_cvcv_str_shorter_space_prepended --initial_extra_space 'only_initial_novel_word' --new_heldout_type 'random_cvcv_str_shorter' --seed 888
 
 python ../utils/convert_cogs_to_json.py --input_path ../data/no_mod/ --output_path ../data/no_mod
 python ../utils/convert_cogs_to_json.py --input_path ../data/w_n/ --output_path ../data/w_n
@@ -27,3 +28,4 @@ python ../utils/convert_cogs_to_json.py --input_path ../data/random_cvcv_str --o
 python ../utils/convert_cogs_to_json.py --input_path ../data/random_cvcv_str_shorter --output_path ../data/random_cvcv_str_shorter
 python ../utils/convert_cogs_to_json.py --input_path ../data/random_cvcv_str_cons_reduced --output_path ../data/random_cvcv_str_cons_reduced
 python ../utils/convert_cogs_to_json.py --input_path ../data/random_cvcv_str_cons_reduced_shorter --output_path ../data/random_cvcv_str_cons_reduced_shorter
+python ../utils/convert_cogs_to_json.py --input_path ../data/random_cvcv_str_shorter_space_prepended --output_path ../data/random_cvcv_str_shorter_space_prepended

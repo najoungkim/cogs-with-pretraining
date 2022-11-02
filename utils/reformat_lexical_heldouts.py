@@ -6,7 +6,7 @@ import string
 import random
 
 # Prespecified set of file names in the COGS dataset.
-_DATASET_FILENAMES = ['train', 'test', 'dev', 'gen', 'train_100']
+_DATASET_FILENAMES = ['train', 'test', 'dev', 'gen', 'train_100', 'test_heldout_items']
 _HELD_OUT_VOCAB_MAP = {
     'hedgehog': '[w_0]',
     'shark': '[w_1]',
@@ -123,14 +123,14 @@ def main():
                     write_exposure_example = True
                 source = ' '.join([vocab_map.get(w, w) for w in source.split()])
                 target = ' '.join([vocab_map.get(w, w) for w in target.split()])
-                if args.new_heldout_type in ['[w_n]', '[w_n]_randn']:
+                if args.new_heldout_type in ['[w_n]', '[w_n]_randn', 'random_cvcv_str_shorter']:
                     if args.initial_extra_space == 'all_initial_words':
                         source = ' ' + source
                         target = ' ' + target
                     elif args.initial_extra_space == 'only_initial_novel_word':
-                        if source.startswith('[w_'):
+                        if source.startswith(tuple(vocab_map.values())):
                             source = ' ' + source
-                        if target.startswith('[w_'):
+                        if target.startswith(tuple(vocab_map.values())):
                             target = ' ' + target
 
                 lines_to_write.append(f'{source}\t{target}\t{gen_type}\n')
